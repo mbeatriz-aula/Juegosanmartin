@@ -1,0 +1,6 @@
+{
+  "name": "Cruce de los Andes - Juego de Cartas",
+  "description": "Juego de cartas didáctico e interactivo sobre la gesta sanmartiniana con preguntas de estimación, secuencias cronológicas y dinámica de apuestas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@layer base {
+  body {
+    background-color: #fdfaf5;
+    color: #2d2a26;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Bento Shadow Utilities */
+.shadow-bento {
+  box-shadow: 4px 4px 0px #2d2a26;
+}
+.shadow-bento-sm {
+  box-shadow: 2px 2px 0px #2d2a26;
+}
+.shadow-bento-navy {
+  box-shadow: 4px 4px 0px #1d3557;
+}
+.shadow-bento-red {
+  box-shadow: 4px 4px 0px #d62828;
+}
+
+/* Custom Scrollbar for cards */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(45, 42, 38, 0.1);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2d2a26;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1d3557;
+}
+
+/* Print Styles for Classroom Cards */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, footer, button, .print\:hidden {
+    display: none !important;
+  }
+  .perspective-1000 {
+    perspective: none !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+  .backface-hidden {
+    backface-visibility: visible !important;
+    position: relative !important;
+  }
+  .rotate-y-180 {
+    transform: none !important;
+    margin-top: 1rem;
+  }
+}
+
